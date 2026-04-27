@@ -30,6 +30,7 @@ jobs:
 
       - name: Add CodeCommit Remote
         run: |
+          cd terraform
           terraform init
           terraform validate
           terraform plan
