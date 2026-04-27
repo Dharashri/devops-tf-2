@@ -28,13 +28,14 @@ jobs:
         with:
           terraform_version: ${{ vars.TERRAFORM_VERSION }} 
 
-      - name: Add CodeCommit Remote
+      - name: Resource terraform
         run: |
           cd terraform
           terraform init
           terraform validate
           terraform plan
 
-      - name: Apply
+      - name: Applying changes
         run: |
+          cd terraform
           terraform apply
