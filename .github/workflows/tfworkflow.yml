@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
-
+      
+permissions:
+  id-token: write      # ← THIS is what allows GitHub to mint the OIDC token
+  contents: read
+  
 jobs:
   mirror:
     runs-on: ubuntu-latest
