@@ -42,8 +42,12 @@ jobs:
         run: |
           cd terraform
           terraform apply --auto-approve
-  
+          
+      - name: list files
+        run: |
+          ls -lrt
       - name: Destroy
         run: |
           cd terraform
-          terraform destroy
+          terraform destroy --auto-approve
+        
