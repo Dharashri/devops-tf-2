@@ -19,8 +19,6 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: AKIAZOTNZJQYMDQ5NVD2
-          aws-secret-access-key: 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
           role-to-assume: arn:aws:iam::649844050992:role/tfrole
           aws-region: us-east-1
 
